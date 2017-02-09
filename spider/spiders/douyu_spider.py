@@ -52,7 +52,7 @@ class DouyuSpider(scrapy.spiders.Spider):
 
         sel = scrapy.Selector(response)
         sites = sel.xpath('//ul[@id="live-list-contentbox"]/li')
-        page_nums = sel.xpath('/html/head/script[5]/text()')[0]
+        page_nums = sel.xpath('/html/head/script[6]/text()')[0]
         page_nums = re.match(r'.*?count: "(\d+)".*?', unicode(page_nums.extract())[98:125]).group(1)
 
         page_nums = int(page_nums)

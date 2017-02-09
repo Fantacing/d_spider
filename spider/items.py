@@ -14,3 +14,9 @@ class DouyuItem(scrapy.Item):
     room_name = scrapy.Field()
     category = scrapy.Field()
 
+
+class CnblogItem(scrapy.Item):
+    title = scrapy.Field()
+    author = scrapy.Field()
+    date = scrapy.Field()
+    text_link = scrapy.Field()
